@@ -95,10 +95,10 @@ class LSMC:
 		# draw sampled path
 		f2 = plt.figure(2)
 
-		x = np.arange(0, self.period + 1)
+		x = np.arange(0, self.period)
 
 		for path in random.sample(range(self.path), sampling):
-			plt.plot(x, self.randomWalk[path, :])
+			plt.plot(x, self.randomWalk[path, :-1])
 
 		plt.title('Sampled Path')
 		plt.xlabel('Period')

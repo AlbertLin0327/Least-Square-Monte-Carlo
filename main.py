@@ -68,6 +68,11 @@ def main():
 	print('-----------------------------')
 	print('')
 
+	print(Model.randomWalk[:, -1])
+
+	# Plot distribution
+	Model.plot()
+
 	print('Enter the dS (porportion) to shift the Random Path to estimate delta. Better to have 0 < dS <= 0.1')
 
 	while True:
@@ -81,8 +86,7 @@ def main():
 	estimate_delta(Model, dS)
 
 
-	# Plot distribution
-	Model.plot()
+	
 	
 
 if __name__ == '__main__':
