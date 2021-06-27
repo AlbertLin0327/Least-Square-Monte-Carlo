@@ -17,10 +17,10 @@ def estimate_delta(Model, dS):
 
 		print('')
 		print('-----------------------------')
-		print(f'Price of {dS} shift {Model.type}: {Model.Price}')
-		print(f'Stdandard deviation of {dS} shift: {Model.std}')
-		print(f'Root Mean Sqaure Error Rate of {dS} shift: {Model.rmser}')
-		print(f'Estimated Delta of {dS} shift: {Delta}')
+		print(f'Price of {Model.type} after {dS} shift: {Model.Price}')
+		print(f'Stdandard deviation after {dS} shift: {Model.std}')
+		print(f'Root Mean Sqaure Error Rate after {dS} shift: {Model.rmser}')
+		print(f'Estimated Delta of {Model.type}: {Delta}')
 		print('-----------------------------')
 		print('')
 
@@ -33,8 +33,7 @@ def main():
 
 	while True:
 		try:
-			type = input()
-			type = type.lower()
+			type = input('>>> ').lower()
 
 			if type == 'put' or type == 'call' or type == 'p' or type == 'c':
 				type = type[0]
@@ -49,7 +48,7 @@ def main():
 
 	while True:
 		try:
-			spot, strike, time, interest, dividend, volatility, period, simulations = map(float, input().split())
+			spot, strike, time, interest, dividend, volatility, period, simulations = map(float, input('>>> ').split())
 			break
 
 		except:
@@ -71,21 +70,18 @@ def main():
 	print('-----------------------------')
 	print('')
 
-	print('Enter the dS (porportion) to shift the Random Path to estimate delta. 0 < dS <= 0.1')
+	print('Enter the dS (porportion) to shift the Random Path to estimate delta. Better to have 0 < dS <= 0.1')
 
 	while True:
 		try:
-			dS = float(input())
-
-			if ds < 0 or ds > 0.1:
-				print('Out of resonable estimation region')
-
-			estimate_delta(Model, dS)
+			dS = float(input('>>> '))
 			break
 
 		except:
-			print(dS)
 			print('Invalid Input!!!')
+
+	estimate_delta(Model, dS)
+
 
 	# Plot distribution
 	Model.plot()

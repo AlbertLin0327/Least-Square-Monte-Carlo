@@ -87,7 +87,7 @@ class LSMC:
 		plt.xlabel('Stock Price')
 		plt.ylabel('Occurance')
 
-		plt.figtext(0.01, 0.01, f'estimated price: {round(self.mean, 4)}\nstandard deviation: {round(self.std, 4)}', fontsize=8)
+		plt.figtext(0.01, 0.01, f'estimated price: {round(self.Price, 4)}\nstandard deviation: {round(self.std, 4)}', fontsize=8)
 
 		# draw the fitting curve
 		plt.plot(x_bar, n)
