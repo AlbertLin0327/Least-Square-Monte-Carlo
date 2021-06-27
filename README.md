@@ -35,12 +35,17 @@ or
 python3 -m pip install -r dependency
 ```
   
-#### Execution   
-
+#### Execution 
+1. Run the program    
 ```
-
+python3 main.py
+```
+  
+2. Follow the input format  
+```
 Enter the type of American Option, Put or Call
->>> Put
+>>> PUT
+
 Enter: spot price, strike price, time interval, interest(%), dividend(%), volatility(%), period, stimulations
 >>> 100 110 2.5 0.05 0.01 0.02 500 100000
 
@@ -59,8 +64,13 @@ Stdandard deviation after 0.08 shift: 0.00933432405179502
 Root Mean Sqaure Error Rate after 0.08 shift: 0.0317061318483637
 Estimated Delta of p: -0.5696338131001397
 -----------------------------
-
 ```
+- *Put* can be written in any cases or even *p*. It works the same for *Call*  
+- Every market attributes should be seperate by a space and written in one line  
+- Interest rate, dividend rate and volatility is require to be written in percentage  
+- Periods and simulations should be integers  
+- The relation between spot price and strike price is assumed as reasonable  
+- dS is exepected not to be too big. Though you might have your own concern
   
 ## Result
 #### Distribution of the Monte Carlo sampled path  

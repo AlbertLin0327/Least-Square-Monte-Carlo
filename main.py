@@ -44,6 +44,7 @@ def main():
 
 
 	# take in the input from user
+	print('')
 	print('Enter: spot price, strike price, time interval, interest(%), dividend(%), volatility(%), period, stimulations')
 
 	while True:
