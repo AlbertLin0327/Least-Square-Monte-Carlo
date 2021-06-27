@@ -19,7 +19,7 @@ def estimate_delta(Model, dS):
 		print('-----------------------------')
 		print(f'Price of {Model.type} after {dS} shift: {Model.Price}')
 		print(f'Stdandard deviation after {dS} shift: {Model.std}')
-		print(f'Root Mean Sqaure Error Rate after {dS} shift: {Model.rmser}')
+		print(f'Root Mean Sqaure Relative Error after {dS} shift: {Model.rmsre}')
 		print(f'Estimated Delta of {Model.type}: {Delta}')
 		print('-----------------------------')
 		print('')
@@ -32,16 +32,13 @@ def main():
 	print("Enter the type of American Option, Put or Call")
 
 	while True:
-		try:
-			type = input('>>> ').lower()
+		type = input('>>> ').lower()
 
-			if type == 'put' or type == 'call' or type == 'p' or type == 'c':
-				type = type[0]
-				break
+		if type == 'put' or type == 'call' or type == 'p' or type == 'c':
+			type = type[0]
+			break
 
-		except:
-			print("Enter Put or Call!!!")
-
+		print("Enter Put or Call!!!")
 
 	# take in the input from user
 	print('')
@@ -67,7 +64,7 @@ def main():
 	print('-----------------------------')
 	print(f'Price of {type}: {Model.Price}')
 	print(f'Stdandard deviation: {Model.std}')
-	print(f'Root Mean Sqaure Error Rate: {Model.rmser}')
+	print(f'Root Mean Sqaure Relative Error: {Model.rmsre}')
 	print('-----------------------------')
 	print('')
 

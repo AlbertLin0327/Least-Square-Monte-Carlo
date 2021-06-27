@@ -71,7 +71,7 @@ class LSMC:
 		# Calculate mean and variance of the stimulation
 		self.Price = np.mean(Y)
 		self.std = np.std(Y) / np.sqrt(self.path)
-		self.rmser = np.sqrt(np.mean(((Y - self.Price) / self.Price) ** 2))
+		self.rmsre = np.sqrt(np.mean(((Y - self.Price) / self.Price) ** 2))
 
 
 	# Plot the distibution

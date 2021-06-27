@@ -44,25 +44,25 @@ python3 main.py
 2. Follow the input format  
 ```
 Enter the type of American Option, Put or Call
->>> PUT
+>>> Put
 
 Enter: spot price, strike price, time interval, interest(%), dividend(%), volatility(%), period, stimulations
->>> 100 110 2.5 0.05 0.01 0.02 500 100000
+>>> 100 110 2.5 0.05 0.01 0.02 500 200000
 
 -----------------------------
-Price of Put: 97.65491215553891
-Stdandard deviation: 0.00979123231158338
-Root Mean Sqaure Error Rate: 0.03170613184836371
+Price of Put: 97.64186831886784
+Stdandard deviation: 0.0069054026599523555
+Root Mean Sqaure Relative Error: 0.031627722872397346
 -----------------------------
 
 Enter the dS (porportion) to shift the Random Path to estimate delta. Better to have 0 < dS <= 0.1
 >>> 0.08
 
 -----------------------------
-Price of p after 0.08 shift: 93.09784165073779
-Stdandard deviation after 0.08 shift: 0.00933432405179502
-Root Mean Sqaure Error Rate after 0.08 shift: 0.0317061318483637
-Estimated Delta of p: -0.5696338131001397
+Price of p after 0.08 shift: 93.08540650524313
+Stdandard deviation after 0.08 shift: 0.006583161759921405
+Root Mean Sqaure Relative Error after 0.08 shift: 0.03162772287239734
+Estimated Delta of p: -0.5695577267030885
 -----------------------------
 ```
 - *Put* can be written in any cases or even *p*. It works the same for *Call*  
@@ -77,12 +77,12 @@ Estimated Delta of p: -0.5696338131001397
 <img src="/images/Distribution.png" height="500">   
   
 #### Random Seleceted Monte Carlo sampled path  
-<img src="/images/Path.png" height="500">  
+<img src="/images/Sample.png" height="500">  
   
 ## Additional Information  
 Explanation: https://www.csie.ntu.edu.tw/~b08902127/Least_Square_Monte_Carlo.pdf  
-
-
+Introduction: https://www.csie.ntu.edu.tw/~b08902127/LSMC_Report.pdf  
+  
 ## Links to Me!
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:linhsinkai@gmail.com)
 [![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@linhsinkai)
