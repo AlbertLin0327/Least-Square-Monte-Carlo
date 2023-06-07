@@ -48,7 +48,7 @@ class LSMC:
                 (
                     self.interest_rate
                     - self.dividend_rate
-                    + (self.volatility_rate ** 2) / 2
+                    - (self.volatility_rate ** 2) / 2
                 )
                 * self.deltaT
                 + self.volatility_rate
